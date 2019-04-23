@@ -61,3 +61,8 @@ docker network create [NAME-OF-NETWORK-HERE]
 docker container run --rm -it --name [NAME-OF-CONTAINER-HERE] --network [NAME-OF-NETWORK-HERE] alpine sh
 ```
 Any container on the same network can talk to any other container on the network by using the `ping [NAME-OF-CONTAINER-HERE]` command.
+
+## Hiding Legacy Commands
+Add the `export DOCKER_HIDE_LEGACY_COMMANDS=true` command to your bash profile in your home directory.
+
+
