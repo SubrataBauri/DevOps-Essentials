@@ -17,3 +17,8 @@ Run the newly created image with command: `docker container run -it [image_name]
 ## Comments
 Comments are started with `#` at the beginning of a line
 
+## Pushing Images
+While official images live in their own namespace, locally created ones do not. We must assign them to our directory with our own Docker ID by calling `docker image tag [docker_ID]/[image_name]:[tag]`
+
+Push image to Docker with: `docker image push [docker_ID]/[image_name]:[tag]`
+
