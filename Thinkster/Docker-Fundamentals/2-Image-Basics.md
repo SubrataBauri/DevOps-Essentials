@@ -22,3 +22,9 @@ While official images live in their own namespace, locally created ones do not. 
 
 Push image to Docker with: `docker image push [docker_ID]/[image_name]:[tag]`
 
+## Docker Plugins
+Ex. `docker plugin install store/weaveworks/net-plugin:2.5.1`
+
+List plugins with `docker plugin ls`
+
+List commands with `docker plugin`
