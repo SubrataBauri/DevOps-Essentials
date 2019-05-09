@@ -28,3 +28,17 @@ Ex. `docker plugin install store/weaveworks/net-plugin:2.5.1`
 List plugins with `docker plugin ls`
 
 List commands with `docker plugin`
+
+## Using a 3rd Party Registry
+Install a third party registry by logging in through your terminal and providing the third party url. 
+For example: `docker login quay.io`
+
+You may need to reassign images with a new directory like so:
+`docker image tag [old_directory]/[image_name]:[tag] quay.io/[new_directory]/[image_name]:[tag]`
+
+*push* and *pull* using the third party registry:
+
+```
+docker image push quay.io/[new_directory]/[image_name]:[tag]  # pushes to quay.io
+docker image pull quay.io/[new_directory]/[image_name]:[tag]  # pulls from quay.io
+```
