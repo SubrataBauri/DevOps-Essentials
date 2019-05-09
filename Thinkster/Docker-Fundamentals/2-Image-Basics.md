@@ -14,3 +14,6 @@ Build your image into a container with: `docker image build -t [image_name]:[tag
 
 Run the newly created image with command: `docker container run -it [image_name]:[tag]`
 
+## Comments
+Comments are started with `#` at the beginning of a line
+
