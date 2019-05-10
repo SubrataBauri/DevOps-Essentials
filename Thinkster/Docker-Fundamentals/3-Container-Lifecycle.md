@@ -17,3 +17,10 @@ To start a second program inside your container:
 To run a shell inside your container, run
 `docker container exec -it [container name] sh`
 
+## Interacting with Containers
+Starting a container with the **-i** flag will show no prompt, but allow you to enter commands and return output.
+
+The **-t** flag on its own shows a prompt but will not execute commands. It is responsible for creating the prompt and positioning your cursor.
+
+It is good practice to use both flags.
+
