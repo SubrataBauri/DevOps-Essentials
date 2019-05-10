@@ -11,4 +11,5 @@ RUN apt-get install -y nginx
 
 ## Startup command (CMD)
 
-CMD nginx -g 'daemon off;'
+# CMD nginx -g 'daemon off;'
+CMD ["/usr/sbin/nginx", "-g", "daemon off;"]

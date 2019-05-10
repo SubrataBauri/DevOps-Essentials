@@ -36,3 +36,6 @@ You can kill a container instantly by calling:
 
 `ctrl-c` will forward a `SIGINT` message to a running container, which forwards it to its process ID. It will only exit when that process has terminated. This may not be immediate.
 
+## Running two commands together
+
+`docker image build -t subratabauri/nginx:latest . && docker container run --name c1 --rm subratabauri/nginx:latest`
