@@ -24,3 +24,12 @@ The **-t** flag on its own shows a prompt but will not execute commands. It is r
 
 It is good practice to use both flags.
 
+## Stopping a Container
+
+`docker container stop [container name]`
+
+This command sends a `SIGTERM` command to terminate the container. If the container does not stop after a grace period, Docker will kill the process with `SIGKILL`.
+
+You can kill a container instantly by calling:
+
+`docker container kill [container name]`
