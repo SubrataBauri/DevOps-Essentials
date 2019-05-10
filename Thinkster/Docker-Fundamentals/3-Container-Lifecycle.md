@@ -33,3 +33,6 @@ This command sends a `SIGTERM` command to terminate the container. If the contai
 You can kill a container instantly by calling:
 
 `docker container kill [container name]`
+
+`ctrl-c` will forward a `SIGINT` message to a running container, which forwards it to its process ID. It will only exit when that process has terminated. This may not be immediate.
+
