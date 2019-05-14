@@ -35,7 +35,7 @@ You can start a container in detached mode using the command `docker container r
 `docker container ls -aq`. The `-aq` flag specifies that all container IDs should be listed.
 
 ## DELETE
-To delete all containers run the command `docker container rm $(docker container ls -aq)`
+To delete all containers run the command `docker container rm -f $(docker container ls -aq)`
 
 Delete individual images using `docker image rm [NAME-OF-IMAGE]`
 
