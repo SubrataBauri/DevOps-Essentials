@@ -61,3 +61,10 @@ Inspect a container with `docker container inspect [container name]` to find any
 
 To quickly remove all unused volumes: `docker volume prune`
 
+
+## Disappearing Volumes
+
+`docker container run --rm -v /data [image]:[tag]`
+
+**Note:** This only works for anonymous volumes. If you provide a name, it will not be deleted.
+
