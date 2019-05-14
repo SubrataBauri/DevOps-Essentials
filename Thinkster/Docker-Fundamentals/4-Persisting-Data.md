@@ -68,3 +68,4 @@ To quickly remove all unused volumes: `docker volume prune`
 
 **Note:** This only works for anonymous volumes. If you provide a name, it will not be deleted.
 
+## The VOLUMES Instruction
