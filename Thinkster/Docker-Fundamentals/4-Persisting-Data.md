@@ -39,3 +39,25 @@ View all volumes with `docker volume ls`
 
 After deleting a container the volumes remain secure and can still be accessed and loaded into new containers. This is an effective way to preserve the state of your containers.
 
+## Using Mount for Volumes
+`docker container run --mount type=volume,src=[volume name],destination=/data,readonly [image]:[tag]`
+
+Make it anonymous volume by ommitting the source
+
+`docker container run --mount destination=/data,readonly [image]:[tag]`
+
+or
+
+`docker container run --mount dst=/data,readonly [image]:[tag]`
+
+
+## Managing Volumes
+
+**Remove unused volume:** `docker volume rm [volume name]`
+
+**View volume details:** `docker volume inspect [volume name]`
+
+Inspect a container with `docker container inspect [container name]` to find any mounted volumes under "Mounts"
+
+To quickly remove all unused volumes: `docker volume prune`
+
