@@ -16,3 +16,8 @@ ex.
 ** after ** `docker container run -v $(pwd)/myfile.html : /var/www/html:ro -p 80:80 nginx:latest # after`
 
 `Note:` This trick varies with operating systems.
+
+## The Mount Option
+
+`docker container run --mount type=bind,src="$(pwd)/html/",destination=/var/www/html,readonly -p 80:80 subratabauri/nginx:latest`
+
