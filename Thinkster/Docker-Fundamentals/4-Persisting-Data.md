@@ -117,3 +117,14 @@ A volume can also be automatically created by a Dockerfile with the VOLUME instr
 - Start the bash shell in a container running your nginx image
   - Mount a new named or anonymous volume to /var/www/html
 - What can you find in the directory /var/www/html?
+
+
+## When to Use Bind mount and Volumes
+### Bind mounts
+
+- When we want to access data from the host and the container source code and configuration files
+
+### Volume
+
+- When we want to persist data from the container
+- When we want to share data between containers.
