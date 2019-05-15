@@ -86,9 +86,16 @@ A volume can also be automatically created by a Dockerfile with the VOLUME instr
   - Execute a shell
   - mount the SAME volume
 
-Solution:
+#### We can share same volume amongst containers:
 
 `docker volume create my-volume`
 
 `docker container run --volume my-volume:/data alpine:latest sh`
+
+
+## Using Volumes from Other Containers
+
+`docker container run -it --name c1 -v test-data:/data alpine:latest sh`
+
+**Copy volume from another container =>** `docker container run --volumes-from c1 -it alpine:latest sh`
 
