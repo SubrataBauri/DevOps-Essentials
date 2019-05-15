@@ -69,3 +69,21 @@ To quickly remove all unused volumes: `docker volume prune`
 **Note:** This only works for anonymous volumes. If you provide a name, it will not be deleted.
 
 ## The VOLUMES Instruction
+
+A volume can also be automatically created by a Dockerfile with the VOLUME instruction: 
+
+`VOLUME /var/lib/postgresql/data`
+
+
+## Simultaneous Access - Lab
+### Access volumes from multiple containers
+- Create a named volume
+- Start an alpine container
+  - Execute a shell
+  - Mount the volume to /data
+  - reate a file in /data (`touch data/test.file`)
+- Start a seond alpine container
+  - Execute a shell
+  - mount the SAME volume
+
+
