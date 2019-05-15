@@ -128,3 +128,5 @@ A volume can also be automatically created by a Dockerfile with the VOLUME instr
 
 - When we want to persist data from the container
 - When we want to share data between containers.
+
+**`df -h` to check mounted volumes inside container**

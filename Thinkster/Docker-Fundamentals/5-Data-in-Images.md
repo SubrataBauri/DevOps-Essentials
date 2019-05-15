@@ -16,9 +16,8 @@ Use COPY command:
 
 `ADD ./html.tar.gz /var/www/` => This will copy the tar file and extract it in the destination
 
-`ADD http://example.com/index.html /var/www/html/example.html` => THis will download file from remote url put in the destination
+`ADD http://example.com/index.html /var/www/html/example.html` => This will download file from remote url put in the destination
 
 ## Ignoring Files
 
 Create `.dockerignore` file to ignore files while COPY
-
