@@ -12,9 +12,9 @@ ex.
 
 ## Shortening the Command for mount volume
 
-** before ** `docker container run -v /some/extremely_long/directory/path/myfile.html : /var/www/html:ro -p 80:80 nginx:latest`
+**before** `docker container run -v /some/extremely_long/directory/path/myfile.html : /var/www/html:ro -p 80:80 nginx:latest`
 
-** after ** `docker container run -v $(pwd)/myfile.html : /var/www/html:ro -p 80:80 nginx:latest # after`
+**after** `docker container run -v $(pwd)/myfile.html : /var/www/html:ro -p 80:80 nginx:latest # after`
 
 `Note:` This trick varies with operating systems.
 
@@ -81,9 +81,14 @@ A volume can also be automatically created by a Dockerfile with the VOLUME instr
 - Start an alpine container
   - Execute a shell
   - Mount the volume to /data
-  - reate a file in /data (`touch data/test.file`)
+  - Create a file in /data (`touch data/test.file`)
 - Start a seond alpine container
   - Execute a shell
   - mount the SAME volume
 
+Solution:
+
+`docker volume create my-volume`
+
+`docker container run --volume my-volume:/data alpine:latest sh`
 
