@@ -75,7 +75,7 @@ A volume can also be automatically created by a Dockerfile with the VOLUME instr
 `VOLUME /var/lib/postgresql/data`
 
 
-## Simultaneous Access - Lab
+## Simultaneous Access - LAB
 ### Access volumes from multiple containers
 - Create a named volume
 - Start an alpine container
@@ -99,3 +99,21 @@ A volume can also be automatically created by a Dockerfile with the VOLUME instr
 
 **Copy volume from another container =>** `docker container run --volumes-from c1 -it alpine:latest sh`
 
+
+## Prepopulating Volumes - LAB
+### Mount a volume containing files
+- Create a named volume test-data
+  - Start a sh in a container running alpine
+    - Mount the volume test-data to /data
+- Create some files and folders in the volume
+  - `touch /data/test.file`
+  - `mkdir /data/some_dir`
+- Stop the container running alpine
+- Start the bash shell in a container running your nginx image
+  Mount the volume test-data to /var/www/html
+- What can you find in the directory /var/www/html?
+
+### Mount a new volume
+- Start the bash shell in a container running your nginx image
+  - Mount a new named or anonymous volume to /var/www/html
+- What can you find in the directory /var/www/html?
