@@ -18,3 +18,7 @@ Use COPY command:
 
 `ADD http://example.com/index.html /var/www/html/example.html` => THis will download file from remote url put in the destination
 
+## Ignoring Files
+
+Create `.dockerignore` file to ignore files while COPY
+
