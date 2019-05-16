@@ -24,3 +24,9 @@
 
 **Both will publish ports:** `0.0.0.0:32768->80/tcp`
 
+
+## Links (Deprecated)
+
+`docker container run --name webserver --rm -d nginx:latest`
+`docker container run --link webserver -it alpine:latest`
+
