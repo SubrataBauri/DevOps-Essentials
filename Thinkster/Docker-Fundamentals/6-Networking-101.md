@@ -11,3 +11,8 @@
 
 `docker container run -p 80-99:80-99 -d nginx:latest`
 
+
+## The EXPOSE Instruction
+
+`EXPOSE 80`
+

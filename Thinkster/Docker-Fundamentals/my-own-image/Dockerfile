@@ -16,6 +16,9 @@ RUN rm /var/log/nginx/error.log && ln -s /dev/stderr /var/log/nginx/error.log
 
 COPY ./html/*.html /var/www/html/
 
+## Expose port
+EXPOSE 80
+
 ## Startup command (CMD)
 
 # CMD nginx -g 'daemon off;'
