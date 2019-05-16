@@ -53,3 +53,6 @@ Stop c2 and start again with different IP, it will still be reached from c1.
 
 `docker container run --network mynet --rm -it --ip 172.19.0.99 --name c2 alpine:latest sh`
 
+## User Defined Networks and Links
+
+**With alias:** `docker container run --network mynet --link webserver:wb -it --rm alpine:latest`
