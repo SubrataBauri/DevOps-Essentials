@@ -16,3 +16,11 @@
 
 `EXPOSE 80`
 
+
+## What Will Be Published
+
+`docker container run -p 80 nginx:latest`
+`docker container run -P nginx:latest`
+
+**Both will publish ports:** `0.0.0.0:32768->80/tcp`
+
