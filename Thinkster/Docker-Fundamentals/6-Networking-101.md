@@ -30,3 +30,13 @@
 `docker container run --name webserver --rm -d nginx:latest`
 `docker container run --link webserver -it alpine:latest`
 
+
+## User Defined Networks
+
+```
+docker network ls
+docker network create [NAME-OF-NETWORK-HERE]
+docker container run --rm -it --name [NAME-OF-CONTAINER-HERE] --network [NAME-OF-NETWORK-HERE] alpine sh
+```
+
+Check with: `ip addr` inside shell of container
