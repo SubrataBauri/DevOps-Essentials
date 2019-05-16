@@ -36,7 +36,20 @@
 ```
 docker network ls
 docker network create [NAME-OF-NETWORK-HERE]
+docker network inspect [NAME-OF-NETWORK-HERE]
+
 docker container run --rm -it --name [NAME-OF-CONTAINER-HERE] --network [NAME-OF-NETWORK-HERE] alpine sh
 ```
 
 Check with: `ip addr` inside shell of container
+
+
+## Resolving Hostnames
+
+`docker container run --network mynet --rm -it --name c1 alpine:latest sh`
+`docker container run --network mynet --rm -it --name c2 alpine:latest sh`
+
+Stop c2 and start again with different IP, it will still be reached from c1.
+
+`docker container run --network mynet --rm -it --ip 172.19.0.99 --name c2 alpine:latest sh`
+
