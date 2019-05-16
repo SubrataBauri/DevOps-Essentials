@@ -56,3 +56,13 @@ Stop c2 and start again with different IP, it will still be reached from c1.
 ## User Defined Networks and Links
 
 **With alias:** `docker container run --network mynet --link webserver:wb -it --rm alpine:latest`
+
+## Sharing Names
+`docker container run --network mynet -d --network-alias webserver alpine:latest` => **Create multiple**
+
+Create another container:
+
+`docker container run --network mynet -it alpine:latest`
+`nslookup webserver`
+
+All the servers will have same name with different IP
