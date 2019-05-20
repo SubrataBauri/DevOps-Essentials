@@ -10,3 +10,8 @@
 
 ## The ENV Instruction
 
+```
+ENV PS1 "\h:\w#"
+ENV PS1="\h:\w#" PS2=">>"
+```
+
